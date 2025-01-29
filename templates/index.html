@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>NHE</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-tagline">
+            <div class="nav-logo">
+                <a href="{{ url_for('views.home') }}">
+                    <img src="{{ url_for('static', filename='assets/Logo-nobackground.png') }}" alt="New Horizons Education">
+                </a>
+            </div>
+    
+            <div class ="nav-tagline">
+                <h4>New Horizons Education</h4>
+                <h5>Boost Maths Methods</h5>
+            </div>
+        </div>
+    </nav>
+
+    <div class="btn-container">
+        <button type="submit" class="btn">Enter</button>
+    </div>
+</body>
+</html>
