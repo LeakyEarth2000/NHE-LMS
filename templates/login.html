@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludiflex | Login & Register</title>
+    <title>NHE | Login & Register</title>
     <!-- BOXICONS -->
-    <link href='assets/boxicons/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/boxicons/css/boxicons.min.css') }}">
     <!-- STYLE -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Login/style.css') }}">
 </head>
 <body>
     <div class="form-container">
         <div class="col col-1">
             <div class="image-layer">
-                <img src="assets/img/white-outline.png" class="form-image-main">
-                <img src="assets/img/dots.png" class="form-image dots">
-                <img src="assets/img/coin.png" class="form-image coin">
-                <img src="assets/img/spring.png" class="form-image spring">
-                <img src="assets/img/rocket.png" class="form-image rocket">
-                <img src="assets/img/cloud.png" class="form-image cloud">
-                <img src="assets/img/stars.png" class="form-image stars">
+                <img src="{{ url_for('static', filename='assets/img/white-outline.png') }}" class="form-image-main">
+                <img src="{{ url_for('static', filename='assets/img/dots.png') }}" class="form-image dots">
+                <img src="{{ url_for('static', filename='assets/img/coin.png') }}" class="form-image coin">
+                <img src="{{ url_for('static', filename='assets/img/spring.png') }}" class="form-image spring">
+                <img src="{{ url_for('static', filename='assets/img/rocket.png') }}" class="form-image rocket">
+                <img src="{{ url_for('static', filename='assets/img/cloud.png') }}" class="form-image cloud">
+                <img src="{{ url_for('static', filename='assets/img/stars.png') }}" class="form-image stars">
             </div>
-            <p class="featured-words">You Are Few Minutes Way To Boost Your Skills With <span>Ludiflex</span></p>
+            <p class="featured-words">Welcome to <span>New Horizon Education</span></p>
         </div>
 
         <div class="col col-2">
@@ -100,6 +100,6 @@
         </div>
     </div>
 
-    <script src="assets/js/main.js"></script>
+    <script src="{{ url_for('static', filename='Login/script.js') }}"></script>
 </body>
 </html>
