@@ -10,10 +10,31 @@
 }
 
 /* ====== Body ===== */
-body{
-    background: url("../img/1.jpg");
-    background-position: center;
-    background-size: cover;
+body {
+    background-color: #09212b;
+    background-image: 
+        /* Golden sunburst effect */
+        radial-gradient(circle at 80% 20%, #f2c353 0%, transparent 25%),
+        /* Blue water-like wave */
+        radial-gradient(ellipse at 30% 70%, #69acc8 15%, transparent 30%),
+        /* Base texture overlay */
+        linear-gradient(
+            135deg,
+            #09212b88 25%,
+            transparent 25%,
+            transparent 75%,
+            #09212b88 75%
+        );
+    background-size: 
+        100% 100%,
+        120% 120%,
+        30px 30px,
+        8px 8px;
+    background-position: 
+        top right,
+        bottom left,
+        0 0,
+        0 0;
     background-attachment: fixed;
     background-repeat: no-repeat;
 
@@ -108,7 +129,7 @@ body{
 }
 .featured-words span{
     font-weight: 600;
-    color: #21264D;
+    color: #09212b;
 }
 
 /* ====== Second Column ===== */
@@ -136,7 +157,7 @@ body{
     transition: .2s;
 }
 .btn-1{
-    background: #21264D;
+    background: #09212b;
 }
 .btn:hover{
     opacity: 0.85;
@@ -228,7 +249,7 @@ body{
     padding: 0 15px;
     margin: 10px 0;
     color: #fff;
-    background: #21264D;
+    background: #09212b;
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
