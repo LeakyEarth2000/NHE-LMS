@@ -292,3 +292,15 @@ body {
         width: 100%;
     }
 }
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.nav-logo img {
+    max-height: 75px; /* Adjust this value to control the logo size */
+    width: auto;
+}

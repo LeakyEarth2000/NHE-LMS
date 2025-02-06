@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHE | Login & Register</title>
+    <!-- BOXICONS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/boxicons/css/boxicons.min.css') }}">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='Login/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo-tagline">
+            <div class="nav-logo">
+                <a href="{{ url_for('views.home') }}">
+                    <img src="{{ url_for('static', filename='assets/Logo-nobackground.png') }}" alt="New Horizons Education">
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="form-container">
+        <div class="col col-1">
+            <div class="image-layer">
+                <img src="{{ url_for('static', filename='assets/img/white-outline.png') }}" class="form-image-main">
+                <img src="{{ url_for('static', filename='assets/img/dots.png') }}" class="form-image dots">
+                <img src="{{ url_for('static', filename='assets/img/coin.png') }}" class="form-image coin">
+                <img src="{{ url_for('static', filename='assets/img/spring.png') }}" class="form-image spring">
+                <img src="{{ url_for('static', filename='assets/img/rocket.png') }}" class="form-image rocket">
+                <img src="{{ url_for('static', filename='assets/img/cloud.png') }}" class="form-image cloud">
+                <img src="{{ url_for('static', filename='assets/img/stars.png') }}" class="form-image stars">
+            </div>
+            <p class="featured-words">Welcome to <span>New Horizon Education</span></p>
+        </div>
+
+        <div class="col col-2">
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <div class="btn-box">
+                <button class="btn btn-1" id="login">Sign In</button>
+                <button class="btn btn-2" id="register">Sign Up</button>
+            </div>
+
+            <!-- Login Form Container -->
+            <div class="login-form">
+                <div class="form-title">
+                    <span>Sign In</span>
+                </div>
+                <form method="POST" action="{{ url_for('views.login') }}">
+                    <div class="form-inputs">
+                        <div class="input-box">
+                            <input type="text" name="username" class="input-field" placeholder="Username" required>
+                            <i class="bx bx-user icon"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="password" class="input-field" placeholder="Password" required>
+                            <i class="bx bx-lock-alt icon"></i>
+                        </div>
+                        <div class="forgot-pass">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+                        <div class="input-box">
+                            <button type="submit" class="input-submit">
+                                <span>Sign In</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="social-login">
+                    <i class="bx bxl-google"></i>
+                    <i class="bx bxl-facebook"></i>
+                    <i class="bx bxl-twitter"></i>
+                    <i class="bx bxl-github"></i>
+                </div>
+            </div>
+
+            <!-- Register Form Container -->
+            <div class="register-form">
+                <div class="form-title">
+                    <span>Create Account</span>
+                </div>
+                <form method="POST" action="{{ url_for('views.login') }}">
+                    <div class="form-inputs">
+                        <div class="input-box">
+                            <input type="email" name="email" class="input-field" placeholder="Email" required>
+                            <i class="bx bx-envelope icon"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" name="username" class="input-field" placeholder="Username" required>
+                            <i class="bx bx-user icon"></i>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="password" class="input-field" placeholder="Password" required>
+                            <i class="bx bx-lock-alt icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-type">Select Role:</label>
+                            <select name="user-type" id="user-type" required>
+                                <option value="">--Please choose a role--</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="student">Student</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <button type="submit" class="input-submit">
+                                <span>Sign Up</span>
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="social-login">
+                    <i class="bx bxl-google"></i>
+                    <i class="bx bxl-facebook"></i>
+                    <i class="bx bxl-twitter"></i>
+                    <i class="bx bxl-github"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='Login/script.js') }}"></script>
+</body>
+</html>
